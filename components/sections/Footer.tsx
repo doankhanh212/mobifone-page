@@ -125,7 +125,7 @@ export function Footer() {
           {/* Bottom footer */}
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-slate-500 text-sm dark:text-slate-400">
             <p>
-              © {new Date().getFullYear()} MobiFone Solutions. Giải pháp chuyển đổi số toàn diện.
+              © {new Date().getFullYear()} MobiFone Solutions. Giải pháp chuyển đổi số toàn diện. Liên hệ hợp tác
             </p>
             <div className="flex gap-6">
               <a href="/lien-he" className="hover:text-cyan-400 transition-colors">
