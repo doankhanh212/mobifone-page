@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import { Zap, Lock, Gauge, BarChart3 } from 'lucide-react'
 
 const trustItems = [
-  { icon: Zap, label: '12 giải pháp số', value: 'Đầy đủ' },
+  { icon: Zap, label: '12 giải pháp số', value: 'Chuyên nghiệp' },
   { icon: Lock, label: 'Tư vấn nhanh qua Zalo', value: '24/7' },
   { icon: Gauge, label: 'Phù hợp doanh nghiệp', value: 'SME+' },
   { icon: BarChart3, label: 'Hỗ trợ chuyển đổi số', value: 'Toàn diện' },
