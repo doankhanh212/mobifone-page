@@ -9,7 +9,6 @@ export function SolutionsGrid() {
   return (
     <section id="solutions" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-950/50">
       <div className="max-w-7xl mx-auto">
-        {/* Title */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -18,14 +17,13 @@ export function SolutionsGrid() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-4">
-            12 giáº£i phĂ¡p sá»‘ MobiFone cho doanh nghiá»‡p
+            12 giải pháp số MobiFone cho doanh nghiệp
           </h2>
-          <p className="text-slate-600 text-lg max-w-2xl mx-auto">
-            Tá»•ng há»£p cĂ¡c giáº£i phĂ¡p há»— trá»£ doanh nghiá»‡p sá»‘ hĂ³a váº­n hĂ nh, chá»©ng tá»«, bĂ¡n hĂ ng, nhĂ¢n sá»± vĂ  chÄƒm sĂ³c khĂ¡ch hĂ ng.
+          <p className="text-slate-600 text-lg max-w-2xl mx-auto dark:text-slate-300">
+            Tổng hợp các giải pháp hỗ trợ doanh nghiệp số hóa vận hành, chứng từ, bán hàng, nhân sự và chăm sóc khách hàng.
           </p>
         </motion.div>
 
-        {/* Solutions Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 relative">
           {PRODUCTS.map((product, index) => {
             const Icon = product.icon
@@ -78,7 +76,7 @@ export function SolutionsGrid() {
                       className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-blue-50 px-4 py-2.5 font-semibold text-blue-700 transition-colors duration-300 hover:bg-blue-600 hover:text-white dark:bg-blue-900/30 dark:text-cyan-300 dark:hover:bg-cyan-600 dark:hover:text-white"
                     >
                       <MessageCircle className="w-4 h-4" />
-                      TÆ° váº¥n Zalo
+                      Tư vấn Zalo
                     </a>
                   </div>
                 </div>
@@ -87,7 +85,6 @@ export function SolutionsGrid() {
           })}
         </div>
 
-        {/* Bottom CTA Card */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -96,10 +93,10 @@ export function SolutionsGrid() {
           className="mt-16 bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-200 rounded-2xl p-8 md:p-12 text-center max-w-4xl mx-auto dark:from-slate-900 dark:to-slate-800 dark:border-cyan-500/30 shadow-sm"
         >
           <h3 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-4">
-            Báº¡n cáº§n tÆ° váº¥n giáº£i phĂ¡p phĂ¹ há»£p?
+            Bạn cần tư vấn giải pháp phù hợp?
           </h3>
           <p className="text-slate-600 dark:text-slate-300 mb-8 max-w-2xl mx-auto">
-            Trao Ä‘á»•i nhanh qua Zalo Ä‘á»ƒ Ä‘Æ°á»£c gá»£i Ă½ giáº£i phĂ¡p phĂ¹ há»£p vá»›i mĂ´ hĂ¬nh váº­n hĂ nh vĂ  ngĂ¢n sĂ¡ch cá»§a doanh nghiá»‡p.
+            Trao đổi nhanh qua Zalo để được gợi ý giải pháp phù hợp với mô hình vận hành và ngân sách của doanh nghiệp.
           </p>
           <a
             href="https://zalo.me/84902931119"
@@ -108,7 +105,7 @@ export function SolutionsGrid() {
             className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-blue-600 text-white font-bold text-lg shadow-lg shadow-blue-500/30 hover:bg-blue-700 hover:-translate-y-1 hover:shadow-blue-500/50 transition-all duration-300 dark:bg-cyan-600 dark:hover:bg-cyan-500"
           >
             <MessageCircle className="w-5 h-5" />
-            Nháº¯n Zalo tÆ° váº¥n ngay
+            Nhắn Zalo tư vấn ngay
           </a>
         </motion.div>
       </div>
