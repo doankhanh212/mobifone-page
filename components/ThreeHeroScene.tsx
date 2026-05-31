@@ -28,7 +28,7 @@ const particles = [
 
 export function ThreeHeroScene() {
   return (
-    <div className="relative min-h-[420px] overflow-hidden rounded-3xl border border-cyan-400/30 bg-slate-950 shadow-2xl shadow-cyan-950/30 sm:min-h-[500px] lg:min-h-[560px]">
+    <div className="relative min-h-[520px] overflow-hidden rounded-3xl border border-cyan-400/30 bg-slate-950 shadow-2xl shadow-cyan-950/30 lg:min-h-[620px]">
       <div className="absolute inset-0 bg-[linear-gradient(rgba(34,211,238,0.22)_1px,transparent_1px),linear-gradient(90deg,rgba(34,211,238,0.22)_1px,transparent_1px)] bg-[size:34px_34px]" />
       <motion.div
         className="absolute -right-20 -top-24 h-96 w-96 rounded-full border border-cyan-300/10 bg-cyan-400/5"
@@ -52,7 +52,7 @@ export function ThreeHeroScene() {
       ))}
 
       <motion.div
-        className="absolute left-6 top-8 z-20 w-[58%] max-w-[320px] rounded-2xl border border-cyan-300/40 bg-slate-950/88 p-6 shadow-2xl shadow-cyan-950/40 backdrop-blur sm:left-8 sm:top-14 sm:p-7"
+        className="absolute left-5 top-6 z-20 w-[72%] max-w-[390px] rounded-2xl border border-cyan-300/40 bg-slate-950/88 p-5 shadow-2xl shadow-cyan-950/40 backdrop-blur sm:left-8 sm:top-10 sm:w-[46%] sm:p-7"
         initial={{ opacity: 0, x: -24 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.7, ease: 'easeOut' }}
@@ -60,30 +60,38 @@ export function ThreeHeroScene() {
         <span className="inline-flex rounded-lg bg-cyan-400/15 px-3 py-1 text-xs font-semibold uppercase text-cyan-200">
           Hệ sinh thái chuyển đổi số
         </span>
-        <h3 className="mt-6 text-3xl font-extrabold leading-tight text-white">
+        <h3 className="mt-5 text-3xl font-extrabold leading-tight text-white">
           MobiFone
           <span className="block text-cyan-300">Digital Solutions</span>
         </h3>
-        <p className="mt-5 text-sm leading-relaxed text-slate-300">
+        <p className="mt-4 text-sm leading-relaxed text-slate-300">
           Văn phòng số • Ký số • Hóa đơn • Tổng đài 3C • Bán hàng • Hạ tầng
         </p>
-        <a
-          href="https://zalo.me/84902931119"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-7 inline-flex rounded-xl bg-blue-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-600/25 transition hover:bg-blue-500"
-        >
-          Tư vấn qua Zalo
-        </a>
+        <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+          <a
+            href="/giai-phap"
+            className="inline-flex items-center justify-center rounded-xl bg-cyan-400 px-5 py-3 text-sm font-bold text-slate-950 shadow-lg shadow-cyan-400/25 transition hover:bg-cyan-300"
+          >
+            Khám phá 12 giải pháp
+          </a>
+          <a
+            href="https://zalo.me/84902931119"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center rounded-xl border border-cyan-300/35 bg-blue-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-600/25 transition hover:bg-blue-500"
+          >
+            Tư vấn Zalo
+          </a>
+        </div>
       </motion.div>
 
       <motion.div
-        className="absolute bottom-8 right-5 top-24 z-10 w-[64%] rounded-2xl border border-cyan-300/60 bg-slate-950/70 p-4 backdrop-blur sm:right-8 sm:top-20 sm:p-5"
+        className="absolute bottom-8 right-5 top-28 z-10 w-[72%] rounded-2xl border border-cyan-300/60 bg-slate-950/70 p-4 backdrop-blur sm:right-8 sm:top-20 sm:w-[62%] sm:p-5"
         initial={{ opacity: 0, scale: 0.94 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, delay: 0.18, ease: 'easeOut' }}
       >
-        <div className="relative h-full min-h-[300px] overflow-visible rounded-xl border border-cyan-300/50 bg-slate-900/70">
+        <div className="relative h-full min-h-[330px] overflow-visible rounded-xl border border-cyan-300/50 bg-slate-900/70">
           <svg className="absolute inset-0 h-full w-full overflow-visible" viewBox="0 0 100 100" preserveAspectRatio="none">
             <defs>
               <linearGradient id="heroLine" x1="0" x2="1">
