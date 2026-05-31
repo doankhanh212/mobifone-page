@@ -1,7 +1,10 @@
 'use client'
 
+import { ArrowRight, CheckCircle2, MessageCircle, ShieldCheck } from 'lucide-react'
 import { motion } from 'framer-motion'
-import { ThreeHeroScene } from '@/components/ThreeHeroScene'
+import { DigitalCommandCenter } from '@/components/hero/DigitalCommandCenter'
+
+const trustItems = ['12 giải pháp số', '99.9% uptime', 'Tư vấn nhanh qua Zalo']
 
 export function HeroSection() {
   return (
@@ -29,9 +32,57 @@ export function HeroSection() {
         initial={{ opacity: 0, y: 18, scale: 0.98 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 0.75, ease: 'easeOut' }}
-        className="mx-auto w-full max-w-7xl"
+        className="mx-auto grid w-full max-w-7xl items-center gap-10 lg:grid-cols-[0.9fr_1.1fr]"
       >
-        <ThreeHeroScene />
+        <div className="max-w-2xl">
+          <div className="inline-flex items-center gap-2 rounded-full border border-cyan-300/35 bg-cyan-400/10 px-4 py-2 text-sm font-semibold text-cyan-700 dark:text-cyan-200">
+            <ShieldCheck className="h-4 w-4" aria-hidden="true" />
+            Hệ sinh thái chuyển đổi số MobiFone
+          </div>
+
+          <h1 className="mt-6 text-4xl font-extrabold tracking-tight text-slate-950 sm:text-5xl lg:text-6xl dark:text-white">
+            Giải pháp số MobiFone cho doanh nghiệp vận hành tinh gọn
+          </h1>
+
+          <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600 dark:text-slate-300">
+            Kết nối văn phòng số, ký số, hóa đơn, bán hàng, tổng đài 3C và hạ tầng số trong một hệ sinh thái dễ triển khai, dễ mở rộng.
+          </p>
+
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a
+              href="/giai-phap"
+              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 px-6 text-base font-bold text-white shadow-lg shadow-blue-600/25 transition duration-300 hover:-translate-y-0.5 hover:shadow-cyan-400/35"
+            >
+              Khám phá 12 giải pháp
+              <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </a>
+            <a
+              href="https://zalo.me/84902931119"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-cyan-300/40 bg-white/80 px-6 text-base font-bold text-blue-700 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:border-cyan-400 hover:bg-cyan-50 dark:bg-slate-950/70 dark:text-cyan-100 dark:hover:bg-cyan-950/60"
+            >
+              <MessageCircle className="h-4 w-4" aria-hidden="true" />
+              Tư vấn qua Zalo
+            </a>
+          </div>
+
+          <div className="mt-8 flex flex-wrap gap-3">
+            {trustItems.map((item) => (
+              <span
+                key={item}
+                className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/70 px-3 py-2 text-sm font-medium text-slate-600 shadow-sm dark:border-cyan-300/20 dark:bg-slate-950/50 dark:text-slate-300"
+              >
+                <CheckCircle2 className="h-4 w-4 text-cyan-500" aria-hidden="true" />
+                {item}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        <div className="w-full lg:justify-self-end">
+          <DigitalCommandCenter />
+        </div>
       </motion.div>
     </section>
   )
