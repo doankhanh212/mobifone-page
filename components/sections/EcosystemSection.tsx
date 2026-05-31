@@ -93,14 +93,7 @@ export function EcosystemSection() {
           viewport={{ once: true }}
           className="mt-16 text-center"
         >
-          <div className="inline-block px-6 py-4 rounded-xl bg-gradient-to-r from-blue-50 to-cyan-50 border border-blue-200">
-            <p className="text-slate-900 font-semibold mb-2">
-              🔗 Tất cả các giải pháp được tích hợp hoàn hảo
-            </p>
-            <p className="text-slate-600 text-sm">
-              Dữ liệu đồng bộ, quy trình liên kết và quản lý tập trung cho hiệu suất tối đa
-            </p>
-          </div>
+        
         </motion.div>
       </div>
     </section>
