@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import { PRODUCTS } from '@/lib/products'
 import { MessageCircle } from 'lucide-react'
 
@@ -17,10 +18,10 @@ export function SolutionsGrid() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-4">
-            12 giải pháp số MobiFone cho doanh nghiệp
+            12 giáº£i phĂ¡p sá»‘ MobiFone cho doanh nghiá»‡p
           </h2>
           <p className="text-slate-600 text-lg max-w-2xl mx-auto">
-            Tổng hợp các giải pháp hỗ trợ doanh nghiệp số hóa vận hành, chứng từ, bán hàng, nhân sự và chăm sóc khách hàng.
+            Tá»•ng há»£p cĂ¡c giáº£i phĂ¡p há»— trá»£ doanh nghiá»‡p sá»‘ hĂ³a váº­n hĂ nh, chá»©ng tá»«, bĂ¡n hĂ ng, nhĂ¢n sá»± vĂ  chÄƒm sĂ³c khĂ¡ch hĂ ng.
           </p>
         </motion.div>
 
@@ -37,42 +38,49 @@ export function SolutionsGrid() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.05 }}
                 viewport={{ once: true }}
-                className="flex flex-col bg-white rounded-xl border border-slate-200 p-6 shadow-sm hover:shadow-lg hover:-translate-y-1 hover:border-blue-400 transition-all duration-300 dark:bg-slate-900 dark:border-slate-800 dark:hover:border-cyan-500/50"
+                className="group flex min-h-[480px] flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-400 hover:shadow-lg dark:border-cyan-500/20 dark:bg-slate-900 dark:hover:border-cyan-500/50"
               >
-                {/* Header (Icon + Number) */}
-                <div className="flex items-center justify-between mb-5">
-                  <div className="w-12 h-12 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center dark:bg-blue-900/30 dark:text-cyan-400">
+                <div className="relative aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-950">
+                  <Image
+                    src={product.image}
+                    alt={product.name}
+                    fill
+                    sizes="(min-width: 1280px) 25vw, (min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-950/10 to-transparent" />
+                  <div className="absolute left-4 top-4 flex h-11 w-11 items-center justify-center rounded-lg border border-white/15 bg-slate-950/65 text-cyan-300 shadow-lg backdrop-blur">
                     <Icon className="w-6 h-6" />
                   </div>
-                  <span className="text-3xl font-black text-slate-100 dark:text-slate-800/80 select-none">
+                  <span className="absolute right-4 top-4 text-3xl font-black text-white/70 select-none">
                     {numberBadge}
                   </span>
                 </div>
 
-                {/* Body Content */}
-                <div className="mb-6 flex-1">
-                  <span className="inline-block px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 text-[10px] font-semibold uppercase tracking-wider mb-3 dark:bg-slate-800 dark:text-slate-400">
-                    {product.category}
-                  </span>
-                  <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 leading-snug">
-                    {product.name}
-                  </h3>
-                  <p className="text-sm text-slate-600 dark:text-slate-400 line-clamp-3">
-                    {product.description}
-                  </p>
-                </div>
+                <div className="flex flex-1 flex-col p-5">
+                  <div className="mb-5 flex-1">
+                    <span className="mb-3 inline-block rounded-full bg-slate-100 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-slate-600 dark:bg-slate-800 dark:text-slate-400">
+                      {product.category}
+                    </span>
+                    <h3 className="mb-2 text-lg font-bold leading-snug text-slate-900 dark:text-white">
+                      {product.name}
+                    </h3>
+                    <p className="line-clamp-4 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+                      {product.description}
+                    </p>
+                  </div>
 
-                {/* Single Zalo CTA */}
-                <div className="mt-auto border-t border-slate-100 dark:border-slate-800 pt-4">
-                  <a
-                    href="https://zalo.me/84902931119"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center w-full gap-2 px-4 py-2.5 rounded-lg bg-blue-50 text-blue-700 font-semibold hover:bg-blue-600 hover:text-white transition-colors duration-300 dark:bg-blue-900/30 dark:text-cyan-300 dark:hover:bg-cyan-600 dark:hover:text-white"
-                  >
-                    <MessageCircle className="w-4 h-4" />
-                    Tư vấn Zalo
-                  </a>
+                  <div className="mt-auto border-t border-slate-100 pt-4 dark:border-slate-800">
+                    <a
+                      href="https://zalo.me/84902931119"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-blue-50 px-4 py-2.5 font-semibold text-blue-700 transition-colors duration-300 hover:bg-blue-600 hover:text-white dark:bg-blue-900/30 dark:text-cyan-300 dark:hover:bg-cyan-600 dark:hover:text-white"
+                    >
+                      <MessageCircle className="w-4 h-4" />
+                      TÆ° váº¥n Zalo
+                    </a>
+                  </div>
                 </div>
               </motion.div>
             )
@@ -88,10 +96,10 @@ export function SolutionsGrid() {
           className="mt-16 bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-200 rounded-2xl p-8 md:p-12 text-center max-w-4xl mx-auto dark:from-slate-900 dark:to-slate-800 dark:border-cyan-500/30 shadow-sm"
         >
           <h3 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-4">
-            Bạn cần tư vấn giải pháp phù hợp?
+            Báº¡n cáº§n tÆ° váº¥n giáº£i phĂ¡p phĂ¹ há»£p?
           </h3>
           <p className="text-slate-600 dark:text-slate-300 mb-8 max-w-2xl mx-auto">
-            Trao đổi nhanh qua Zalo để được gợi ý giải pháp phù hợp với mô hình vận hành và ngân sách của doanh nghiệp.
+            Trao Ä‘á»•i nhanh qua Zalo Ä‘á»ƒ Ä‘Æ°á»£c gá»£i Ă½ giáº£i phĂ¡p phĂ¹ há»£p vá»›i mĂ´ hĂ¬nh váº­n hĂ nh vĂ  ngĂ¢n sĂ¡ch cá»§a doanh nghiá»‡p.
           </p>
           <a
             href="https://zalo.me/84902931119"
@@ -100,7 +108,7 @@ export function SolutionsGrid() {
             className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-blue-600 text-white font-bold text-lg shadow-lg shadow-blue-500/30 hover:bg-blue-700 hover:-translate-y-1 hover:shadow-blue-500/50 transition-all duration-300 dark:bg-cyan-600 dark:hover:bg-cyan-500"
           >
             <MessageCircle className="w-5 h-5" />
-            Nhắn Zalo tư vấn ngay
+            Nháº¯n Zalo tÆ° váº¥n ngay
           </a>
         </motion.div>
       </div>

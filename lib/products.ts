@@ -18,6 +18,7 @@ export interface Product {
   description: string
   category: string
   detailHref: string
+  image: string
   icon: LucideIcon
   featured?: boolean
 }
@@ -29,6 +30,7 @@ export const PRODUCTS: Product[] = [
     description: 'Giải pháp loa thông minh ứng dụng AI giúp thông báo giao dịch thanh toán thành công, hỗ trợ cửa hàng nhận tiền nhanh chóng và an toàn.',
     category: 'Thanh toán số / Hộ kinh doanh',
     detailHref: 'https://zalo.me/84902931119',
+    image: '/1.jpg',
     icon: Smartphone,
   },
   {
@@ -37,6 +39,7 @@ export const PRODUCTS: Product[] = [
     description: 'Dịch vụ chữ ký số và chứng thư số hỗ trợ ký số hợp đồng, hóa đơn, tài liệu và giao dịch điện tử.',
     category: 'Chữ ký số / Pháp lý điện tử',
     detailHref: 'https://zalo.me/84902931119',
+    image: '/2.jpg',
     icon: FileSignature,
     featured: true,
   },
@@ -46,6 +49,7 @@ export const PRODUCTS: Product[] = [
     description: 'Giải pháp quản lý hóa đơn điện tử giúp doanh nghiệp kiểm soát, tra cứu và vận hành nghiệp vụ hóa đơn hiệu quả.',
     category: 'Hóa đơn / Quản lý chứng từ',
     detailHref: 'https://zalo.me/84902931119',
+    image: '/3.jpg',
     icon: FileText,
   },
   {
@@ -54,6 +58,7 @@ export const PRODUCTS: Product[] = [
     description: 'Giải pháp quản lý văn bản, công việc và quy trình điều hành nội bộ trên nền tảng số.',
     category: 'Văn phòng số / Điều hành',
     detailHref: 'https://zalo.me/84902931119',
+    image: '/4.jpg',
     icon: Briefcase,
     featured: true,
   },
@@ -63,6 +68,7 @@ export const PRODUCTS: Product[] = [
     description: 'Giải pháp quản trị doanh nghiệp cho SME, hỗ trợ quản lý bán hàng, vận hành và quy trình kinh doanh.',
     category: 'ERP / Quản trị doanh nghiệp',
     detailHref: 'https://zalo.me/84902931119',
+    image: '/5.jpg',
     icon: BarChart,
   },
   {
@@ -71,6 +77,7 @@ export const PRODUCTS: Product[] = [
     description: 'Giải pháp hợp đồng điện tử giúp tạo lập, ký kết, quản lý và lưu trữ hợp đồng an toàn trên môi trường số.',
     category: 'Hợp đồng điện tử / Ký số',
     detailHref: 'https://zalo.me/84902931119',
+    image: '/6.jpg',
     icon: FileSignature,
     featured: true,
   },
@@ -80,6 +87,7 @@ export const PRODUCTS: Product[] = [
     description: 'Giải pháp quản lý bán hàng giúp hộ kinh doanh và cửa hàng quản lý đơn hàng, doanh thu và hoạt động bán lẻ.',
     category: 'Bán hàng / POS',
     detailHref: 'https://zalo.me/84902931119',
+    image: '/7.jpg',
     icon: ShoppingCart,
   },
   {
@@ -88,6 +96,7 @@ export const PRODUCTS: Product[] = [
     description: 'Giải pháp hóa đơn điện tử hỗ trợ phát hành, ký số, quản lý, tra cứu và lưu trữ hóa đơn.',
     category: 'Hóa đơn điện tử / Kế toán',
     detailHref: 'https://zalo.me/84902931119',
+    image: '/8.jpg',
     icon: FileText,
     featured: true,
   },
@@ -97,6 +106,7 @@ export const PRODUCTS: Product[] = [
     description: 'Giải pháp quản lý công việc giúp giao việc, theo dõi tiến độ, cộng tác và nâng cao hiệu suất làm việc.',
     category: 'Quản lý công việc / Cộng tác',
     detailHref: 'https://zalo.me/84902931119',
+    image: '/9.png',
     icon: CheckCircle,
   },
   {
@@ -105,6 +115,7 @@ export const PRODUCTS: Product[] = [
     description: 'Giải pháp quản trị nhân sự hỗ trợ quản lý hồ sơ nhân viên, chấm công, quy trình nhân sự và dữ liệu lao động.',
     category: 'HRM / Nhân sự',
     detailHref: 'https://zalo.me/84902931119',
+    image: '/10.png',
     icon: Users,
   },
   {
@@ -113,6 +124,7 @@ export const PRODUCTS: Product[] = [
     description: 'Giải pháp tổng đài Cloud Contact Center giúp doanh nghiệp quản lý chăm sóc khách hàng, telesales và hiệu suất tổng đài viên.',
     category: 'Tổng đài / Contact Center',
     detailHref: 'https://zalo.me/84902931119',
+    image: '/11.jpg',
     icon: PhoneCall,
     featured: true,
   },
@@ -122,6 +134,7 @@ export const PRODUCTS: Product[] = [
     description: 'Dịch vụ SIP Trunk hỗ trợ kết nối tổng đài doanh nghiệp linh hoạt, tối ưu chi phí thoại và mở rộng hệ thống liên lạc.',
     category: 'Viễn thông / Tổng đài doanh nghiệp',
     detailHref: 'https://zalo.me/84902931119',
+    image: '/12.png',
     icon: Radio,
   },
 ]
