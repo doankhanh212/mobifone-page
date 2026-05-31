@@ -41,7 +41,7 @@ export function HeroSection() {
           </div>
 
           <h1 className="mt-6 text-4xl font-extrabold tracking-tight text-slate-950 sm:text-5xl lg:text-6xl dark:text-white">
-            Giải pháp số MobiFone cho doanh nghiệp vận hành tinh gọn
+            MobiFone - Giải pháp chuyển đổi số hàng đầu cho doanh nghiệp của bạn
           </h1>
 
           <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600 dark:text-slate-300">
