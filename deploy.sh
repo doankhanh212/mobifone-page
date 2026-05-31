@@ -37,7 +37,7 @@ fi
 
 echo "==> Starting ${APP_NAME} on ${HOST}:${PORT}"
 pm2 describe "$APP_NAME" >/dev/null 2>&1 && pm2 delete "$APP_NAME"
-pm2 start pnpm --name "$APP_NAME" -- start -- --hostname "$HOST" --port "$PORT"
+pm2 start pnpm --name "$APP_NAME" -- exec next start -H "$HOST" -p "$PORT"
 pm2 save
 
 echo "==> Deployed successfully"
