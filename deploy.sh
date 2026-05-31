@@ -2,7 +2,7 @@
 set -euo pipefail
 
 APP_NAME="${APP_NAME:-mobi-fone-landing-page}"
-PORT="${PORT:-3000}"
+PORT="${PORT:-3001}"
 HOST="${HOST:-0.0.0.0}"
 
 cd "$(dirname "$0")"
