@@ -116,6 +116,12 @@ export function Footer() {
                   trongnghiavo89@gmail.com
                 </a>
               </div>
+              <div>
+                <p className="text-slate-500 text-xs mb-1 dark:text-slate-400">Địa chỉ</p>
+                <p className="text-slate-600 dark:text-slate-300 text-sm">
+                  Khu Dân Cư CityLand, Phường Gò Vấp, TP. HCM
+                </p>
+              </div>
             </div>
           </motion.div>
         </div>
