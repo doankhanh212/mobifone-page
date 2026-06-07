@@ -28,7 +28,9 @@ export async function generateMetadata({ params }: SolutionPageProps): Promise<M
   const image = `${SITE_URL}${getSolutionImage(solution)}`
 
   return {
-    title: solution.seoTitle,
+    title: {
+      absolute: solution.seoTitle,
+    },
     description: solution.seoDescription,
     keywords: solution.keywords,
     alternates: {
@@ -43,7 +45,7 @@ export async function generateMetadata({ params }: SolutionPageProps): Promise<M
       images: [
         {
           url: image,
-          alt: solution.name,
+          alt: solution.slug === 'truyen-thanh-thong-minh' ? 'Minh họa giải pháp Truyền thanh thông minh MobiFone' : solution.name,
         },
       ],
     },
@@ -74,13 +76,10 @@ export default async function SolutionPage({ params }: SolutionPageProps) {
     url,
     provider: {
       '@type': 'Organization',
-      name: 'MobiFone Solutions',
+      name: 'MobiFone Solutions HCM',
       url: SITE_URL,
     },
-    areaServed: {
-      '@type': 'Country',
-      name: 'Việt Nam',
-    },
+    areaServed: 'VN',
   }
   const breadcrumbJsonLd = {
     '@context': 'https://schema.org',
@@ -119,12 +118,17 @@ export default async function SolutionPage({ params }: SolutionPageProps) {
     })),
   }
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [serviceJsonLd, breadcrumbJsonLd, faqJsonLd],
+  }
+
   return (
     <PageShell>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify([serviceJsonLd, breadcrumbJsonLd, faqJsonLd]),
+          __html: JSON.stringify(jsonLd),
         }}
       />
       <SolutionDetailPage solution={solution} />

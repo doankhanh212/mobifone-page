@@ -78,7 +78,7 @@ export function Footer() {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <h3 className="font-bold text-slate-900 mb-4 text-sm uppercase tracking-wider dark:text-white">&nbsp;</h3>
+            <div className="mb-4 h-5" aria-hidden="true" />
             <div className="space-y-2">
               {PRODUCTS.slice(6).map((product) => (
                 <Link

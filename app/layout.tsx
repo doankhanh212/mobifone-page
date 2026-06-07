@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from 'next/font/google'
 import { ThemeProvider } from '@/components/theme-provider'
 import './globals.css'
 
+const siteUrl = new URL('https://mobifonehcm.com.vn')
+
 const geist = Geist({ subsets: ['latin'], variable: '--font-geist-sans' })
 const geistMono = Geist_Mono({
   subsets: ['latin'],
@@ -10,9 +12,37 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Giải pháp chuyển đổi số MobiFone | eOffice, CA, eContract, Invoice, 3C',
-  description: 'Khám phá 12 giải pháp số MobiFone cho doanh nghiệp: Loa Thần Tài, MobiFone CA, IMS, eOffice, 1ERP, eContract, 1POS, Invoice, eWork, HRM, Cloud Contact Center 3C và Truyền thanh thông minh.',
-  keywords: 'giải pháp số MobiFone, chuyển đổi số doanh nghiệp, MobiFone eOffice, MobiFone CA, chữ ký số MobiFone, MobiFone eContract, hợp đồng điện tử, MobiFone Invoice, hóa đơn điện tử, MobiFone IMS, MobiFone 1POS, Loa Thần Tài MobiFone, MobiFone eWork, MobiFone HRM, tổng đài 3C, Cloud Contact Center, Truyền thanh thông minh, Smart Sale for SME, 1ERP',
+  metadataBase: siteUrl,
+  title: {
+    default: 'MobiFone Solutions HCM – Giải Pháp Chuyển Đổi Số Cho Doanh Nghiệp',
+    template: '%s | MobiFone Solutions HCM',
+  },
+  description: 'Tư vấn giải pháp số MobiFone cho doanh nghiệp: eOffice, MobiFone CA, eContract, Invoice, IMS, 1POS, eWork, HRM, Cloud Contact Center 3C, Loa Thần Tài và Truyền thanh thông minh.',
+  keywords: [
+    'giải pháp số MobiFone',
+    'chuyển đổi số doanh nghiệp',
+    'MobiFone eOffice',
+    'MobiFone CA',
+    'chữ ký số MobiFone',
+    'MobiFone eContract',
+    'hợp đồng điện tử',
+    'MobiFone Invoice',
+    'hóa đơn điện tử',
+    'MobiFone IMS',
+    'MobiFone 1POS',
+    'MobiFone eWork',
+    'MobiFone HRM',
+    'Cloud Contact Center 3C',
+    'Loa Thần Tài MobiFone',
+    'Truyền thanh thông minh',
+  ],
+  alternates: {
+    canonical: '/',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
   icons: {
     icon: [
       {
@@ -23,9 +53,26 @@ export const metadata: Metadata = {
     shortcut: '/favicon.png',
   },
   openGraph: {
-    title: 'Giải pháp chuyển đổi số MobiFone | eOffice, CA, eContract, Invoice, 3C',
-    description: 'Khám phá 12 giải pháp số MobiFone cho doanh nghiệp: Loa Thần Tài, MobiFone CA, IMS, eOffice, 1ERP, eContract, 1POS, Invoice, eWork, HRM, Cloud Contact Center 3C và Truyền thanh thông minh.',
+    title: 'MobiFone Solutions HCM – Giải Pháp Chuyển Đổi Số Cho Doanh Nghiệp',
+    description: 'Tư vấn giải pháp số MobiFone cho doanh nghiệp: eOffice, MobiFone CA, eContract, Invoice, IMS, 1POS, eWork, HRM, Cloud Contact Center 3C, Loa Thần Tài và Truyền thanh thông minh.',
+    url: '/',
+    siteName: 'MobiFone Solutions HCM',
     type: 'website',
+    locale: 'vi_VN',
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: 'MobiFone Solutions HCM - 12 giải pháp chuyển đổi số doanh nghiệp',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'MobiFone Solutions HCM – Giải Pháp Chuyển Đổi Số Cho Doanh Nghiệp',
+    description: 'Tư vấn giải pháp số MobiFone cho doanh nghiệp: eOffice, MobiFone CA, eContract, Invoice, IMS, 1POS, eWork, HRM, Cloud Contact Center 3C, Loa Thần Tài và Truyền thanh thông minh.',
+    images: ['/opengraph-image'],
   },
 }
 

@@ -1314,7 +1314,7 @@ export function getSolutionIcon(iconName: string) {
 }
 
 export function getSolutionImage(solution: Pick<Solution, 'slug'>) {
-  return solutionImages[solution.slug] ?? '/mobifone_tech_hero.gif'
+  return solutionImages[solution.slug] ?? '/icon.svg'
 }
 
 export function getSolutionBySlug(slug: string) {

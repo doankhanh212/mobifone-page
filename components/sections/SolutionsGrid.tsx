@@ -17,9 +17,9 @@ export function SolutionsGrid() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-4">
+          <h1 className="text-4xl font-bold text-slate-900 dark:text-white mb-4">
             12 giải pháp số MobiFone cho doanh nghiệp
-          </h2>
+          </h1>
           <p className="text-slate-600 text-lg max-w-2xl mx-auto dark:text-slate-300">
             Tổng hợp các giải pháp hỗ trợ doanh nghiệp số hóa vận hành, chứng từ, bán hàng, nhân sự và chăm sóc khách hàng.
           </p>
@@ -47,7 +47,7 @@ export function SolutionsGrid() {
                 <div className="relative aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-950">
                   <Image
                     src={product.image}
-                    alt={product.name}
+                    alt={product.id === 12 ? 'Minh họa giải pháp Truyền thanh thông minh MobiFone' : product.name}
                     fill
                     sizes="(min-width: 1280px) 25vw, (min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
