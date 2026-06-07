@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 import { ECOSYSTEM_CATEGORIES, PRODUCTS } from '@/lib/products'
 
 export function EcosystemSection() {
@@ -58,17 +59,19 @@ export function EcosystemSection() {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.4 }}
                         viewport={{ once: true }}
-                        className="flex items-start gap-3 p-3 rounded-lg bg-white/60 hover:bg-white transition-colors"
+                        className="rounded-lg bg-white/60 transition-colors hover:bg-white"
                       >
-                        <Icon className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
-                        <div className="flex-grow">
-                          <p className="font-semibold text-slate-900 text-sm">
-                            {product.name}
-                          </p>
-                          <p className="text-xs text-slate-500 mt-0.5">
-                            {product.category}
-                          </p>
-                        </div>
+                        <Link href={product.detailHref} className="flex items-start gap-3 p-3">
+                          <Icon className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                          <div className="flex-grow">
+                            <p className="font-semibold text-slate-900 text-sm">
+                              {product.name}
+                            </p>
+                            <p className="text-xs text-slate-500 mt-0.5">
+                              {product.category}
+                            </p>
+                          </div>
+                        </Link>
                       </motion.div>
                     )
                   })}

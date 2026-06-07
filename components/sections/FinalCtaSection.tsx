@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 import { ZaloLink } from '../ZaloLink'
 
 export function FinalCtaSection() {
@@ -65,12 +66,12 @@ export function FinalCtaSection() {
           <ZaloLink variant="primary" className="text-lg px-8 py-3">
             Nhắn Zalo tư vấn ngay
           </ZaloLink>
-          <a
+          <Link
             href="/giai-phap"
             className="inline-flex items-center justify-center px-8 py-3 rounded-lg border border-slate-300 text-slate-800 hover:border-blue-400 hover:bg-blue-50 transition-all duration-300 font-medium dark:border-slate-500 dark:text-white dark:hover:border-cyan-400 dark:hover:bg-cyan-400/10"
           >
             Xem lại 12 giải pháp
-          </a>
+          </Link>
         </motion.div>
 
         {/* Trust note */}

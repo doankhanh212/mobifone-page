@@ -35,7 +35,7 @@ const useCases = [
       'Khó quản lý hiệu suất tổng đài viên',
       'Không có dữ liệu cho phân tích',
     ],
-    recommendations: ['Cloud Contact Center 3C', 'SIP Trunk'],
+    recommendations: ['Cloud Contact Center 3C', 'Truyền thanh thông minh'],
   },
   {
     icon: School,

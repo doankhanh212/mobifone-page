@@ -42,7 +42,7 @@ const solutionNodes: SolutionNode[] = [
   { label: 'eWork', Icon: BriefcaseBusiness, x: 14, y: 68 },
   { label: '1POS', Icon: ShoppingCart, x: 8, y: 45 },
   { label: 'IMS', Icon: FileText, x: 18, y: 34 },
-  { label: 'SIP', Icon: RadioTower, x: 84, y: 52 },
+  { label: 'TTTM', Icon: RadioTower, x: 84, y: 52 },
   { label: '1ERP', Icon: Cloud, x: 50, y: 22 },
   { label: 'Loa TT', Icon: Volume2, x: 55, y: 72 },
 ]

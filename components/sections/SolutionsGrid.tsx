@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import Link from 'next/link'
 import { PRODUCTS } from '@/lib/products'
 import { MessageCircle } from 'lucide-react'
 
@@ -36,8 +37,13 @@ export function SolutionsGrid() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.05 }}
                 viewport={{ once: true }}
-                className="group flex min-h-[480px] flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-400 hover:shadow-lg dark:border-cyan-500/20 dark:bg-slate-900 dark:hover:border-cyan-500/50"
+                className="group relative flex min-h-[480px] flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-400 hover:shadow-lg dark:border-cyan-500/20 dark:bg-slate-900 dark:hover:border-cyan-500/50"
               >
+                <Link
+                  href={product.detailHref}
+                  className="absolute inset-0 z-10"
+                  aria-label={`Xem chi tiết ${product.name}`}
+                />
                 <div className="relative aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-950">
                   <Image
                     src={product.image}
@@ -55,7 +61,7 @@ export function SolutionsGrid() {
                   </span>
                 </div>
 
-                <div className="flex flex-1 flex-col p-5">
+                <div className="relative flex flex-1 flex-col p-5">
                   <div className="mb-5 flex-1">
                     <span className="mb-3 inline-block rounded-full bg-slate-100 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-slate-600 dark:bg-slate-800 dark:text-slate-400">
                       {product.category}
@@ -73,7 +79,7 @@ export function SolutionsGrid() {
                       href="https://zalo.me/84902931119"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-blue-50 px-4 py-2.5 font-semibold text-blue-700 transition-colors duration-300 hover:bg-blue-600 hover:text-white dark:bg-blue-900/30 dark:text-cyan-300 dark:hover:bg-cyan-600 dark:hover:text-white"
+                      className="relative z-20 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-blue-50 px-4 py-2.5 font-semibold text-blue-700 transition-colors duration-300 hover:bg-blue-600 hover:text-white dark:bg-blue-900/30 dark:text-cyan-300 dark:hover:bg-cyan-600 dark:hover:text-white"
                     >
                       <MessageCircle className="w-4 h-4" />
                       Tư vấn Zalo

@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 import { Product } from '@/lib/products'
 import { ZaloLink } from './ZaloLink'
 
@@ -50,7 +51,9 @@ export function ProductCard({ product, delay = 0 }: ProductCardProps) {
 
           {/* Product Name */}
           <h3 className="text-lg font-bold text-slate-900 mb-2 dark:text-white">
-            {product.name}
+            <Link href={product.detailHref} className="hover:text-blue-600 dark:hover:text-cyan-300">
+              {product.name}
+            </Link>
           </h3>
 
           {/* Category Badge */}
@@ -70,6 +73,12 @@ export function ProductCard({ product, delay = 0 }: ProductCardProps) {
 
         {/* CTA Buttons */}
         <div className="flex flex-col gap-3 mt-auto">
+          <Link
+            href={product.detailHref}
+            className="inline-flex w-full items-center justify-center rounded-lg border border-blue-200 px-4 py-2 text-sm font-bold text-blue-700 transition hover:border-blue-500 hover:bg-blue-50 dark:border-cyan-500/30 dark:text-cyan-200 dark:hover:bg-cyan-500/10"
+          >
+            Xem chi tiết
+          </Link>
           <ZaloLink variant="primary" className="w-full justify-center text-sm py-2 px-4">
             Tư vấn qua Zalo
           </ZaloLink>

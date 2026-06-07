@@ -16,9 +16,9 @@ export function CommunicationSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold text-slate-900 mb-4">Tổng đài và chăm sóc khách hàng hiện đại</h2>
+          <h2 className="text-4xl font-bold text-slate-900 mb-4">Liên lạc và truyền thông thông minh</h2>
           <p className="text-slate-600 text-lg">
-            Giải pháp liên lạc doanh nghiệp đa kênh, tích hợp thoại và quản lý khách hàng
+            Kết hợp tổng đài cloud đa kênh với truyền thanh ứng dụng CNTT, IoT và nền tảng cloud
           </p>
         </motion.div>
 
@@ -65,7 +65,7 @@ export function CommunicationSection() {
             </ZaloLink>
           </motion.div>
 
-          {/* Product 2 - SIP Trunk */}
+          {/* Product 2 - Smart Broadcast */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -77,20 +77,20 @@ export function CommunicationSection() {
               <div className="flex items-center justify-center h-14 w-14 rounded-lg bg-cyan-600 text-white">
                 <Radio className="h-7 w-7" />
               </div>
-              <h3 className="text-2xl font-bold text-slate-900">SIP Trunk</h3>
+              <h3 className="text-2xl font-bold text-slate-900">Truyền thanh thông minh</h3>
             </div>
 
             <p className="text-slate-600 mb-6 leading-relaxed">
-              Dịch vụ SIP Trunk hỗ trợ kết nối tổng đài doanh nghiệp linh hoạt, tối ưu chi phí thoại và mở rộng hệ thống liên lạc.
+              Giải pháp truyền thanh thế hệ mới của MobiFone giúp phát tin qua IP, quản lý thiết bị IoT từ xa và chuyển văn bản thành giọng nói bằng AI.
             </p>
 
             <ul className="space-y-3 mb-8">
               {[
-                'Kết nối tổng đài linh hoạt',
-                'Tối ưu chi phí gọi quốc tế',
-                'Số ảo (DID) cho doanh nghiệp',
-                'Độ tin cậy 99.99% uptime',
-                'Hỗ trợ nhiều tuyến gọi đồng thời',
+                'Phát thanh từ điện thoại, máy tính bảng, laptop hoặc PC',
+                'Đặt lịch phát bản tin theo giờ, ngày và tuần',
+                'Chuyển văn bản thành file ghi âm bằng AI text-to-speech',
+                'Quản lý thiết bị MIRA, mGateway từ xa',
+                'Biên soạn và phát hành tin tức địa phương tới ứng dụng người dân',
               ].map((feature, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <span className="flex-shrink-0 w-5 h-5 rounded-full bg-blue-500 flex items-center justify-center mt-0.5">
@@ -102,7 +102,7 @@ export function CommunicationSection() {
             </ul>
 
             <ZaloLink variant="primary" className="w-full justify-center">
-              Tư vấn dịch vụ SIP Trunk
+              Tư vấn Truyền thanh thông minh
             </ZaloLink>
           </motion.div>
         </div>
@@ -163,7 +163,7 @@ export function CommunicationSection() {
           className="text-center mt-12"
         >
           <ZaloLink variant="primary" className="text-base">
-            Tư vấn tổng đài doanh nghiệp
+            Tư vấn giải pháp truyền thông
           </ZaloLink>
         </motion.div>
       </div>

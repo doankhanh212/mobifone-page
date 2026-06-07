@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { MessageCircle, Mail, Phone } from 'lucide-react'
+import Link from 'next/link'
 import { PRODUCTS } from '@/lib/products'
 
 export function Footer() {
@@ -59,15 +60,13 @@ export function Footer() {
             <h3 className="font-bold text-slate-900 mb-4 text-sm uppercase tracking-wider dark:text-white">Giải pháp</h3>
             <div className="space-y-2">
               {PRODUCTS.slice(0, 6).map((product) => (
-                <a
+                <Link
                   key={product.id}
                   href={product.detailHref}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="block text-slate-600 hover:text-blue-600 transition-colors text-sm dark:text-slate-400 dark:hover:text-cyan-400"
                 >
                   {product.name}
-                </a>
+                </Link>
               ))}
             </div>
           </motion.div>
@@ -82,15 +81,13 @@ export function Footer() {
             <h3 className="font-bold text-slate-900 mb-4 text-sm uppercase tracking-wider dark:text-white">&nbsp;</h3>
             <div className="space-y-2">
               {PRODUCTS.slice(6).map((product) => (
-                <a
+                <Link
                   key={product.id}
                   href={product.detailHref}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="block text-slate-600 hover:text-blue-600 transition-colors text-sm dark:text-slate-400 dark:hover:text-cyan-400"
                 >
                   {product.name}
-                </a>
+                </Link>
               ))}
             </div>
           </motion.div>

@@ -2,6 +2,7 @@
 
 import { ArrowRight, CheckCircle2, MessageCircle, ShieldCheck } from 'lucide-react'
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 import { DigitalCommandCenter } from '@/components/hero/DigitalCommandCenter'
 
 const trustItems = ['12 giải pháp số', '99.9% uptime', 'Tư vấn nhanh qua Zalo']
@@ -49,13 +50,13 @@ export function HeroSection() {
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <a
+            <Link
               href="/giai-phap"
               className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 px-6 text-base font-bold text-white shadow-lg shadow-blue-600/25 transition duration-300 hover:-translate-y-0.5 hover:shadow-cyan-400/35"
             >
               Khám phá 12 giải pháp
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
-            </a>
+            </Link>
             <a
               href="https://zalo.me/84902931119"
               target="_blank"

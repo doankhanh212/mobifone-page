@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 
 const nodes = [
   { label: '1ERP', x: 68, y: 17 },
@@ -10,7 +11,7 @@ const nodes = [
   { label: 'IMS', x: 48, y: 36 },
   { label: '1POS', x: 48, y: 54 },
   { label: 'eContract', x: 92, y: 49 },
-  { label: 'SIP', x: 91, y: 63 },
+  { label: 'TTTM', x: 91, y: 63 },
   { label: 'eWork', x: 58, y: 71 },
   { label: 'HRM', x: 73, y: 77 },
   { label: 'Loa TT', x: 78, y: 84 },
@@ -58,12 +59,12 @@ export function ThreeHeroScene() {
           Tổng đài 3C • Bán hàng • Hạ tầng
         </p>
         <div className="mt-[10%] flex flex-wrap gap-3">
-          <a
+          <Link
             href="/giai-phap"
             className="inline-flex items-center justify-center rounded-xl bg-cyan-400 px-[7%] py-[4%] text-[clamp(12px,1.25vw,16px)] font-bold text-slate-950 shadow-lg shadow-cyan-400/25 transition hover:bg-cyan-300"
           >
             Khám phá 12 giải pháp
-          </a>
+          </Link>
           <a
             href="https://zalo.me/84902931119"
             target="_blank"

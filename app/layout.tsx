@@ -11,8 +11,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: 'Giải pháp chuyển đổi số MobiFone | eOffice, CA, eContract, Invoice, 3C',
-  description: 'Khám phá 12 giải pháp số MobiFone cho doanh nghiệp: Loa Thần Tài, MobiFone CA, IMS, eOffice, 1ERP, eContract, 1POS, Invoice, eWork, HRM, Cloud Contact Center 3C và SIP Trunk.',
-  keywords: 'giải pháp số MobiFone, chuyển đổi số doanh nghiệp, MobiFone eOffice, MobiFone CA, chữ ký số MobiFone, MobiFone eContract, hợp đồng điện tử, MobiFone Invoice, hóa đơn điện tử, MobiFone IMS, MobiFone 1POS, Loa Thần Tài MobiFone, MobiFone eWork, MobiFone HRM, tổng đài 3C, Cloud Contact Center, SIP Trunk, Smart Sale for SME, 1ERP',
+  description: 'Khám phá 12 giải pháp số MobiFone cho doanh nghiệp: Loa Thần Tài, MobiFone CA, IMS, eOffice, 1ERP, eContract, 1POS, Invoice, eWork, HRM, Cloud Contact Center 3C và Truyền thanh thông minh.',
+  keywords: 'giải pháp số MobiFone, chuyển đổi số doanh nghiệp, MobiFone eOffice, MobiFone CA, chữ ký số MobiFone, MobiFone eContract, hợp đồng điện tử, MobiFone Invoice, hóa đơn điện tử, MobiFone IMS, MobiFone 1POS, Loa Thần Tài MobiFone, MobiFone eWork, MobiFone HRM, tổng đài 3C, Cloud Contact Center, Truyền thanh thông minh, Smart Sale for SME, 1ERP',
   icons: {
     icon: [
       {
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Giải pháp chuyển đổi số MobiFone | eOffice, CA, eContract, Invoice, 3C',
-    description: 'Khám phá 12 giải pháp số MobiFone cho doanh nghiệp: Loa Thần Tài, MobiFone CA, IMS, eOffice, 1ERP, eContract, 1POS, Invoice, eWork, HRM, Cloud Contact Center 3C và SIP Trunk.',
+    description: 'Khám phá 12 giải pháp số MobiFone cho doanh nghiệp: Loa Thần Tài, MobiFone CA, IMS, eOffice, 1ERP, eContract, 1POS, Invoice, eWork, HRM, Cloud Contact Center 3C và Truyền thanh thông minh.',
     type: 'website',
   },
 }
