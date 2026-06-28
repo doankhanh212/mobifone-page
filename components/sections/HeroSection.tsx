@@ -33,7 +33,7 @@ export function HeroSection() {
         initial={{ opacity: 0, y: 18, scale: 0.98 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 0.75, ease: 'easeOut' }}
-        className="mx-auto grid w-full max-w-7xl items-center gap-10 lg:grid-cols-[0.9fr_1.1fr]"
+        className="mx-auto grid w-full max-w-7xl items-stretch gap-10 lg:grid-cols-[0.9fr_1.1fr]"
       >
         <div className="max-w-2xl">
           <div className="inline-flex items-center gap-2 rounded-full border border-cyan-300/35 bg-cyan-400/10 px-4 py-2 text-sm font-semibold text-cyan-700 dark:text-cyan-200">
@@ -81,8 +81,8 @@ export function HeroSection() {
           </div>
         </div>
 
-        <div className="w-full lg:justify-self-end">
-          <DigitalCommandCenter />
+        <div className="flex w-full items-stretch lg:justify-self-end">
+          <DigitalCommandCenter className="lg:aspect-auto lg:h-full lg:max-w-none" />
         </div>
       </motion.div>
     </section>

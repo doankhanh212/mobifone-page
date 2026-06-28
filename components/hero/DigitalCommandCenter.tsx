@@ -51,12 +51,12 @@ const tabletLabels = ['eOffice', 'CA', 'Invoice', 'eContract', '3C', 'HRM', 'eWo
 const mobileLabels = ['eOffice', 'CA', 'Invoice', '3C']
 const connectorTarget = { x: 50, y: 50 }
 
-export function DigitalCommandCenter() {
+export function DigitalCommandCenter({ className = '' }: { className?: string }) {
   const reduceMotion = useReducedMotion()
 
   return (
     <div
-      className="relative mx-auto aspect-[4/3] w-full max-w-[720px] overflow-hidden rounded-2xl border border-cyan-300/35 bg-[#020B18] shadow-[0_0_44px_rgba(0,170,255,0.22)] sm:aspect-[16/9]"
+      className={`relative mx-auto aspect-[4/3] w-full max-w-[720px] overflow-hidden rounded-2xl border border-cyan-300/35 bg-[#020B18] shadow-[0_0_44px_rgba(0,170,255,0.22)] sm:aspect-[16/9] ${className}`}
       aria-label="MobiFone digital command center visual"
     >
       {/* Background */}
